@@ -6,6 +6,8 @@ Este projeto é uma ferramenta completa em Python para criação de pendrives bo
 
 O script foi projetado para ser simples de usar, seguro e amigável, enquanto executa tarefas avançadas como checagem de hash, desmontagem automática e gravação utilizando dd.
 
+
+
 **🚀 Recursos Principais (baseados no código real)
 🎨 Interface gráfica (Tkint**er)
 
@@ -15,9 +17,13 @@ Botões grandes, labels dinâmicos, barra de progresso
 
 Popups informativos e mensagens de erro
 
+
+
 **📥 Download automático de ISOs**
 
 O script permite baixar a ISO diretamente da internet, salvando-a localmente com barra de progresso.
+
+
 
 **📂 Seleção de ISO manual**
 
@@ -27,6 +33,8 @@ Exibe tamanho e informações da ISO
 
 Calcula hash SHA256 da imagem
 
+
+
 **🔌 Detecção automática de pendrive**
 
 Utiliza lsblk + análise de interface (usb)
@@ -35,11 +43,15 @@ Lista apenas dispositivos removíveis
 
 Exibe nome real, tamanho e caminho /dev/sdX
 
+
+
 **📤 Desmontagem automática**
 
 Antes de gravar, o script executa:
 
 umount /dev/sdX*
+
+
 
 **💾 Escrita segura com dd**
 
@@ -50,13 +62,18 @@ Usa dd diretamente com:
 dd if=arquivo.iso of=/dev/sdX bs=4M status=progress
 
 
+
 **Executa sync ao final**
 
 Verifica erros durante a execução
 
+
+
 **🧵 Processamento em threads**
 
 A gravação é feita em thread separada, evitando travar a interface.
+
+
 
 **🔐 Sistema de Licenciamento Integrado**
 
@@ -68,11 +85,15 @@ Valida a chave informada
 
 Bloqueia recursos caso a licença seja inválida
 
+
+
 **📝 Logs e status em tempo real**
 
 Cada etapa é exibida no terminal
 
 Popups amigáveis indicam falhas, progresso e sucesso
+
+
 
 **🧩 Dependências do Sistema**
 
@@ -86,6 +107,8 @@ sudo dnf install pv util-linux coreutils parted p7zip
 
 Arch
 sudo pacman -S pv util-linux coreutils parted p7zip
+
+
 
 **🐍 Ambiente Virtual (recomendado)**
 Criar venv
@@ -116,6 +139,8 @@ Ou com requirements.txt:
 requests
 psutil
 
+
+
 **🖥️ Como Executar**
 
 Dentro da venv:
@@ -128,11 +153,15 @@ Ou torne executável:
 chmod +x bootable_usb_creator_final.py
 ./bootable_usb_creator_final.py
 
+
+
 **🔐 Permissões Necessárias**
 
 A gravação precisa de root:
 
 sudo venv/bin/python3 bootable_usb_creator_final.py
+
+
 
 **📊 Fluxo Completo (baseado no código real)**
 
@@ -158,6 +187,8 @@ Mensagem de sucesso ou erro é exibida
 
 Interface continua responsiva graças ao threading
 
+
+
 **⚠️ Avisos**
 
 Todo conteúdo do pendrive será apagado.
@@ -169,6 +200,8 @@ lsblk -o NAME,SIZE,MODEL,TRAN
 
 Nunca selecione /dev/sda.
 
+
+
 **📁 Estrutura Recomendada**
 /
 ├── bootable_usb_creator_final.py
@@ -176,6 +209,8 @@ Nunca selecione /dev/sda.
 ├── requirements.txt
 └── assets/
     └── splash/
+
+
 
 **🛠️ Melhorias Futuras (compatíveis com seu código)**
 
